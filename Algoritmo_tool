@@ -1,0 +1,14 @@
+//CREA TEST PARTIZIONATO//
+
+C:\VCAST_2018_SP1\clicast -e SOMPRSTD -u SomPrStdFsm -s SomPrStdFsmRx157Valid TESt Partition
+
+//ESPORTA SCRIPT//
+C:\VCAST_2018_SP1\clicast -e SOMPRSTD -u SomPrStdFsm -s SomPrStdFsmRx157Valid -t SomPrStdFsmRx157Valid-PARTITIONS TESt Script Create C:\test\partitiontest.tst
+
+//parsing script e sostituzione di nTrain//
+
+//delete di tutti script su VectorCast//
+C:\VCAST_2018_SP1\clicast –e <SOMPRSTD> TESt Delete yes
+
+//reimportazione script corretti su VectorCast//
+clicast –e <env> TESt Script Run <scriptfile>

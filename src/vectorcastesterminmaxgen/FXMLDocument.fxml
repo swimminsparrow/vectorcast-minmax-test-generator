@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="vMainAnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vectorcastesterminmaxgen.FXMLDocumentController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane>
+               <children>
+                  <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TableView fx:id="vMainTable" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="vParamNameColumn" minWidth="200.0" prefWidth="-1.0" text="Parameter" />
+                                    <TableColumn fx:id="vOccurencesColumn" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" style="-fx-alignment: CENTER;" text="# Occurences" />
+                                    <TableColumn fx:id="vLockedValueColumn" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Locked Value" />
+                                    <TableColumn fx:id="vMinColumn" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Min" />
+                                    <TableColumn fx:id="vMaxColumn" maxWidth="-1.0" minWidth="100.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Max" />
+                                    <TableColumn fx:id="vCustomSubProgramValuesColumn" editable="false" maxWidth="-1.0" minWidth="200.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Custom Function Values" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                           <children>
+                              <Label text="Input Values Found:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="vNumInputFoundLabel" text="0">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label layoutX="452.0" layoutY="10.0" maxWidth="1.7976931348623157E308" text="(see View-&gt;Reports for further info)" HBox.hgrow="ALWAYS" />
+                              <Button fx:id="vDeleteParamButton" alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#vButtonClicked" text="Delete">
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/other_icons/remove.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="vAddParamButton" alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#vButtonClicked" text="Edit/Add">
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/other_icons/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TitledPane fx:id="vParamDetailsTitledPane" collapsible="false" contentDisplay="TOP" disable="true" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="330.0" prefHeight="330.0" text="Param Details">
+                           <content>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <VBox spacing="10.0">
+                                       <children>
+                                          <HBox spacing="5.0">
+                                             <children>
+                                                <Label text="Name: ">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="vParamNameLabel" maxWidth="1.7976931348623157E308" minWidth="300.0" />
+                                             </children>
+                                          </HBox>
+                                          <TitledPane text="Function List:">
+                                             <content>
+                                                <ListView fx:id="vFunctionsListView" editable="true" maxWidth="1.7976931348623157E308" />
+                                             </content>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </TitledPane>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="Custom Values per Function" HBox.hgrow="ALWAYS">
+                                       <content>
+                                          <VBox maxHeight="1.7976931348623157E308" spacing="10.0">
+                                             <children>
+                                                <TableView fx:id="vFunctionCustomParamTable" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" VBox.vgrow="ALWAYS">
+                                                   <columns>
+                                                      <TableColumn fx:id="vFunctionCustomTableColumn" minWidth="450.0" prefWidth="-1.0" text="Function" />
+                                                      <TableColumn fx:id="vLockedValueCustomTableColumn" maxWidth="-1.0" minWidth="90.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Locked Value" />
+                                                      <TableColumn fx:id="vMinCustomTableColumn" maxWidth="-1.0" minWidth="60.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Min" />
+                                                      <TableColumn fx:id="vMaxCustomTableColumn" maxWidth="-1.0" minWidth="60.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Max" />
+                                                   </columns>
+                                                </TableView>
+                                                <HBox fx:id="vSelectedParamActionsHBox" alignment="CENTER_RIGHT" spacing="20.0">
+                                                   <children>
+                                                      <Button fx:id="vDeleteCustomValuesButton" alignment="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#vFunctionCustomParamTableButtonActions" text="Delete">
+                                                         <graphic>
+                                                            <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../resources/other_icons/remove.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin></Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </TitledPane>
+                                 </children>
+                              </HBox>
+                           </content>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TitledPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem fx:id="vMenuFile_SaveParams" mnemonicParsing="false" onAction="#vSaveButtonAction" text="Save Params" />
+                        <MenuItem fx:id="vMenuFile_Close" mnemonicParsing="false" onAction="#vMenuItemClicked" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="View">
+                     <items>
+                        <MenuItem fx:id="vMenuView_Reports" disable="true" mnemonicParsing="false" onAction="#vMenuItemClicked" text="Reports" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="vMenuView_LogWindow" mnemonicParsing="false" onAction="#vMenuItemClicked" text="Log Window" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="vMenuEdit_Settings" mnemonicParsing="false" onAction="#vMenuItemClicked" text="Settings" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="vMenuRun" mnemonicParsing="false" text="Run">
+                     <items>
+                        <MenuItem fx:id="vMenuRun_RunParser" mnemonicParsing="false" onAction="#vMenuItemClicked" text="Run Parser" />
+                        <MenuItem fx:id="vMenuRun_Generate" disable="true" mnemonicParsing="false" onAction="#vMenuItemClicked" text="Build Boundary TestCases" />
+                        <MenuItem fx:id="vMenuRun_VerifyExecutionResults" mnemonicParsing="false" onAction="#vMenuItemClicked" text="Verify Execution Results" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Info">
+                  <items>
+                        <MenuItem fx:id="vMenuInfo_Help" mnemonicParsing="false" onAction="#vMenuItemClicked" text="Help" />
+                    <MenuItem fx:id="vMenuInfo_About" mnemonicParsing="false" onAction="#vMenuItemClicked" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <TitledPane fx:id="vLoggerTitledPane" expanded="false" text="Logger">
+                     <content>
+                        <TextArea fx:id="vLoggerTextArea" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                     </content>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TitledPane>
+                  <ToolBar nodeOrientation="RIGHT_TO_LEFT">
+                     <items>
+                        <AnchorPane maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT">
+                           <children>
+                              <HBox maxWidth="1.7976931348623157E308" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label text="Environment:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="vEnvironmentNameLabel" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" />
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="BOTTOM" text="roberto.caputo@intecs.it">
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

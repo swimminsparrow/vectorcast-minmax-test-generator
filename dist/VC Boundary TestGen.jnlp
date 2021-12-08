@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="VC Boundary TestGen.jnlp">
+  <information>
+    <title>VC Boundary TestGen</title>
+    <vendor>Roberto Caputo</vendor>
+    <description>null</description>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-splash:src/resources/splashscreen.png "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="VectorCastEsterMinMaxGen.jar" size="543250" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.3-javadoc.jar" size="814388" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.3.jar" size="246174" download="eager" />
+    <jar href="lib\commons-io-2.6-javadoc.jar" size="833601" download="eager" />
+    <jar href="lib\commons-io-2.6.jar" size="214788" download="eager" />
+    <jar href="lib\commons-lang3-3.7-javadoc.jar" size="1277784" download="eager" />
+    <jar href="lib\commons-lang3-3.7.jar" size="499634" download="eager" />
+    <jar href="lib\commons-logging-1.2-javadoc.jar" size="158448" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\jdom-2.0.6-javadoc.jar" size="1007377" download="eager" />
+    <jar href="lib\jdom-2.0.6.jar" size="304924" download="eager" />
+    <jar href="lib\log4j-api-2.11.1-javadoc.jar" size="932589" download="eager" />
+    <jar href="lib\log4j-api-2.11.1.jar" size="264058" download="eager" />
+    <jar href="lib\log4j-core-2.11.1.jar" size="1607936" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="VC Boundary TestGen" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="vectorcastesterminmaxgen.VectorCastEsterMinMaxGen"  name="VC Boundary TestGen" />
+  <update check="always"/>
+</jnlp>

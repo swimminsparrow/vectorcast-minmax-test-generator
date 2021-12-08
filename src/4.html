@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.1.1 (Windows)"/>
+	<meta name="author" content="Roberto Caputo"/>
+	<meta name="created" content="2018-12-06T09:59:41.211000000"/>
+	<meta name="changedby" content="Roberto Caputo"/>
+	<meta name="changed" content="2019-04-10T16:34:26.510000000"/>
+	<style type="text/css">
+		@page { margin-left: 2cm; margin-right: 1.7cm }
+		p { margin-bottom: 0.25cm; line-height: 115% }
+		a:link { so-language: zxx }
+	</style>
+</head>
+<body lang="it-IT" dir="ltr">
+<p style="font-variant: normal; font-style: normal"><b>4. Generazione
+dei Test di Boundary</b></p>
+<p><span style="font-variant: normal"><span style="font-style: normal">Dopo
+aver terminato la configurazione dei parametri, selezionare &ldquo;</span></span><span style="font-variant: normal"><i>Run</i></span><span style="font-variant: normal">
+&rarr; </span><span style="font-variant: normal"><i>Build Boundary
+TestCases</i></span><span style="font-variant: normal">&rdquo;</span><span style="font-variant: normal"><span style="font-style: normal">.
+</span></span>
+</p>
+<p><span style="font-variant: normal"><span style="font-style: normal">Nel
+</span></span><span style="font-variant: normal"><span style="font-style: normal"><b>Default
+Case</b></span></span><span style="font-variant: normal"><span style="font-style: normal">
+(senza alcuna opzione specificata) saranno generati 4 Test Script
+(.tst):</span></span></p>
+<ul>
+	<li/>
+<p><b>NOMEENVIRONMENT_MAX.</b><b>tst</b><b>:</b> contiene il
+	MAX per ogni variabile specificata dall&rsquo;utente, o in caso
+	contrario il MAX rappresentabile per tipo.</p>
+	<li/>
+<p><b>NOMEENVIRONMENT_MIN.</b><b>tst</b><b>:</b> contiene il
+	MIN per ogni variabile specificata dall&rsquo;utente, o in caso
+	contrario il MIN rappresentabile per tipo.</p>
+	<li/>
+<p><b>NOMEENVIRONMENT_Intorno_Destro.</b><b>tst</b><b>: </b><span style="font-variant: normal"><span style="font-style: normal"><span style="font-weight: normal">per
+	ogni variabile specificata dall&rsquo;utente (MAX o Locked Value),
+	il valore viene incrementato di 1</span></span></span><span style="font-weight: normal">.</span></p>
+	<li/>
+<p><span style="font-variant: normal"><span style="font-style: normal"><b>NOMEENVIRONMENT_Intorno_Sinistro.tst:</b></span></span><span style="font-variant: normal"><span style="font-style: normal">
+	</span></span><span style="font-variant: normal"><span style="font-style: normal"><span style="font-weight: normal">per
+	ogni variabile specificata dall&rsquo;utente (MIN o Locked Value),
+	il valore viene decrementato di 1.</span></span></span></p>
+</ul>
+<p style="font-variant: normal; font-style: normal"><span style="font-variant: normal"><span style="font-style: normal"><span style="font-weight: normal">I
+Test Script generati sono salvati nella cartella
+VectorCastEsterMinMaxGenCacheFolder.</span></span></span></p>
+<p><b><span style="font-variant: normal"><span style="font-style: normal">Opzioni:</span></span></b></p>
+<ul>
+	<li/>
+<p><b><span style="font-variant: normal"><span style="font-style: normal">Build
+	Combination TestCases:</span></span></b><span style="font-variant: normal"><span style="font-style: normal"><span style="font-weight: normal">
+	se abilitato, per ogni funzione verr&agrave; generato un test di
+	intorno partizionato per ogni variabile per cui &egrave; stato
+	specificato un MIN, MAX o Locked Value.</span></span></span></p>
+	<li/>
+<p><span style="font-variant: normal"><span style="font-style: normal"><b>Import
+	TestCases in VectorCast </b></span></span><span style="font-variant: normal"><span style="font-style: normal"><span style="font-weight: normal">(richiede
+	Server Licenze VectorCast avviato): se abilitato e se &egrave; stato
+	inserito un Path contenente un Environment valido, gli script
+	generati saranno importati automaticamente nell&rsquo;ambiente
+	VectorCast specificato.</span></span></span></p>
+	<li/>
+<p><b>Execute TestCases in Environment </b><span style="font-variant: normal"><span style="font-style: normal"><span style="font-weight: normal">(richiede
+	Server Licenze VectorCast avviato): se abilitato e se &egrave; stato
+	inserito un Path contenente un Environment valido, i TestCase
+	importati nell&rsquo;ambiente VectorCast saranno eseguiti
+	automaticamente al termine.</span></span></span></p>
+</ul>
+</body>
+</html>

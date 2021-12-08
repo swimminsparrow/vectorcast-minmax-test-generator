@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="vMainAnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vectorcastesterminmaxgen.Views.VerifyExecutionResults.FXMLVerifyExecutionResultsController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TreeTableView fx:id="vMainTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="600.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TreeTableColumn fx:id="vTestCaseColumn" minWidth="400.0" prefWidth="-1.0" text="TestCase" />
+                <TreeTableColumn fx:id="vExpectedResultColumn" minWidth="120.0" prefWidth="-1.0" resizable="false" style="-fx-alignment: CENTER;" text="Expected Result" />
+                  <TreeTableColumn fx:id="vResultColumn" minWidth="120.0" prefWidth="-1.0" resizable="false" style="-fx-alignment: CENTER;" text="Result" />
+                  <TreeTableColumn fx:id="vMatchingColumn" minWidth="120.0" prefWidth="-1.0" resizable="false" style="-fx-alignment: CENTER;" text="Matching" />
+              </columns>
+            </TreeTableView>
+         </center>
+         <bottom>
+            <TitledPane fx:id="vTestCaseDetailsTitledPane" collapsible="false" contentDisplay="TOP" disable="true" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="280.0" text="TestCase Details" BorderPane.alignment="CENTER">
+               <content>
+                  <HBox spacing="20.0">
+                     <children>
+                        <VBox spacing="5.0">
+                           <children>
+                              <HBox spacing="5.0">
+                                 <children>
+                                    <Label text="Environment:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="vEnvironmentNameLabel" maxWidth="1.7976931348623157E308" minWidth="300.0" />
+                                 </children>
+                              </HBox>
+                              <Separator prefWidth="200.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Separator>
+                              <HBox layoutX="10.0" layoutY="10.0" spacing="5.0">
+                                 <children>
+                                    <Label text="UUT:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="vUUTNameLabel" maxWidth="1.7976931348623157E308" minWidth="300.0" />
+                                 </children>
+                              </HBox>
+                              <Separator layoutX="10.0" layoutY="34.0" prefWidth="200.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Separator>
+                              <HBox layoutX="10.0" layoutY="32.0" spacing="5.0">
+                                 <children>
+                                    <Label text="SubProgram:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="vSubprogramTextField" editable="false" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="300.0" style="-fx-background-color: transparent; -fx-background-insets: 0px; -fx-padding: 0 0 0 0;">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <Separator layoutX="10.0" layoutY="62.0" prefWidth="200.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Separator>
+                              <HBox layoutX="10.0" layoutY="54.0" spacing="5.0">
+                                 <children>
+                                    <Label text="TestCase:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="vTestCaseNameTextField" editable="false" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="300.0" style="-fx-background-color: transparent; -fx-background-insets: 0px; -fx-padding: 0 0 0 0;">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <Separator layoutX="10.0" layoutY="92.0" prefWidth="200.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Separator>
+                              <HBox layoutX="10.0" layoutY="76.0" spacing="5.0">
+                                 <children>
+                                    <Label text="# Inputs:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="vInputLabel" maxWidth="1.7976931348623157E308" minWidth="300.0" />
+                                 </children>
+                              </HBox>
+                              <Separator layoutX="10.0" layoutY="122.0" prefWidth="200.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Separator>
+                              <HBox layoutX="10.0" layoutY="98.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Execution Result:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="vExecutionResultLabel" maxWidth="1.7976931348623157E308" minWidth="300.0" />
+                                 </children>
+                              </HBox>
+                              <Separator layoutX="10.0" layoutY="152.0" prefWidth="200.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Separator>
+                              <HBox layoutX="10.0" layoutY="120.0" spacing="5.0">
+                                 <children>
+                                    <Label text="Execution Date:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="vExecutionDateLabel" maxWidth="1.7976931348623157E308" minWidth="300.0" />
+                                 </children>
+                              </HBox>
+                              <Separator layoutX="10.0" layoutY="182.0" prefWidth="200.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Separator>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="Function Inputs:" HBox.hgrow="ALWAYS">
+                           <content>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <TableView fx:id="vSubProgramInputsTable" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" VBox.vgrow="ALWAYS">
+                                       <columns>
+                                          <TableColumn fx:id="vInputNameColumn" minWidth="450.0" prefWidth="-1.0" text="Input Name" />
+                                          <TableColumn fx:id="vInputValueColumn" maxWidth="-1.0" minWidth="90.0" prefWidth="-1.0" style="-fx-alignment: CENTER;" text="Value" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </HBox>
+               </content>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TitledPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
