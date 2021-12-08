@@ -1,42 +1,11 @@
 # vectorcastminmaxgen
 VectorCast Boundary tests generator and runner
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 6.0.1.1 (Windows)"/>
-	<meta name="author" content="Roberto Caputo"/>
-	<meta name="created" content="2018-12-06T09:59:41.211000000"/>
-	<meta name="changedby" content="Roberto Caputo"/>
-	<meta name="changed" content="2019-01-21T13:48:55.741000000"/>
-	<style type="text/css">
-		@page { margin-left: 2cm; margin-right: 1.7cm }
-		p { margin-bottom: 0.25cm; line-height: 115% }
-		h3.cjk { font-family: "SimSun" }
-		h3.ctl { font-family: "Lucida Sans" }
-		a:link { so-language: zxx }
-	</style>
-</head>
-<body lang="it-IT" dir="ltr">
-<h3 class="western">Informazioni Generali:</h3>
-<p>Il Tool consente di eseguire le seguenti operazioni:</p>
-<ul>
-	<li/>
-<p>Gestire in automatico tutti i parametri numerici di input
-	alle funzioni di un Environment VectorCast specificato dall&rsquo;utente.</p>
-	<li/>
-<p>Generare Test di Boundary e importarli nell&rsquo;Environment
-	VectorCast Specificato.</p>
-	<li/>
-<p>Verificare i risultati di esecuzione dei TestCases.</p>
-</ul>
-<p><br/>
-<br/>
+What this tool is for
 
-<p><img src="resources/icon/VectorCastAssistant_16x16.png" name="Immagine1" align="left" width="23" height="23" border="0"/>
-L&rsquo;icona
-del tool indica le funzionalit&agrave; che prevedono
-l'interfacciamento con VectorCast.</p>
+- Manage functions input parameters for a specified VectorCast Environment
+- Generate, import and Run Boundary Tests in VectorCast
+- Verify execution results of the TestCases
+
+See in-app help for more docs (in italian =( )...
 
