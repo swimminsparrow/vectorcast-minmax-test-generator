@@ -9,3 +9,4 @@ What this tool is for
 
 See in-app help for more docs (in italian =( )...
 
+JRE 8 is required for Launching the application
